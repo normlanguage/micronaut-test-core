@@ -1,0 +1,16 @@
+package binding
+
+import micronaut.test.core.annotation.MockBean
+
+@MockBean()
+class TestGreeting {
+  String message() {
+    return "test"
+  }
+}
+
+Void main() {
+  require(condition: TestGreeting.class.annotation<MockBean>() != null, message: "MockBean binding is missing")
+  require(condition: TestGreeting().message() == "test", message: "Greeting changed")
+  printLine(TestGreeting().message())
+}
