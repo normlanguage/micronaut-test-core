@@ -1,6 +1,6 @@
 package binding
 
-import micronaut.test.core.annotation.MockBean
+import micronaut.test.core.MockBean
 
 @MockBean()
 class TestGreeting {
