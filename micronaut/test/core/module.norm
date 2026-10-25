@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "micronaut.test.core",
-    version: 3,
+    version: 4,
     exports: ["MockBean", "TransactionMode"],
     binding: jarBinding(
       target: mavenJar(
